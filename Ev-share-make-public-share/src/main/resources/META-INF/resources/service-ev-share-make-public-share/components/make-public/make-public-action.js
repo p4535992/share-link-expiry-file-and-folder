@@ -49,7 +49,7 @@
                 actionName: "makePublicAction",
                 fn: function makePublic(file) {
                     
-                	var msg = this.msg("message.make-public.folder.confirm", file.displayName)
+                	var msg = this.msg("service.ev.share.make.public.share.message.make-public.folder.confirm", file.displayName)
                     var duration = prompt(msg);
                 	
                     if (duration === false) {
@@ -66,18 +66,18 @@
                                     var added = resultJson.results[0].added;
                                     if (added)
                                         Alfresco.util.PopupManager.displayMessage({
-                                            text: this.msg("message.public.added", file.displayName)
+                                            text: this.msg("service.ev.share.make.public.share.message.public.added", file.displayName)
                                         });
                                     else
                                         Alfresco.util.PopupManager.displayMessage({
-                                            text: this.msg("message.make-public.failure", file.displayName)
+                                            text: this.msg("service.ev.share.make.public.share.message.make-public.failure", file.displayName)
                                         });
                                 },
                                 scope: this
                             }
                         },
                         failure: {
-                            message: this.msg("message.make-public.failure", file.displayName)
+                            message: this.msg("service.ev.share.make.public.share.message.make-public.failure", file.displayName)
                         },
                         webscript: {
                             name: "eu/xfel/make-public",
@@ -114,18 +114,18 @@
                             var removed = resultJson.results[0].removed;
                             if (removed)
                                 Alfresco.util.PopupManager.displayMessage({
-                                    text: this.msg("message.public.removed", file.displayName)
+                                    text: this.msg("service.ev.share.make.public.share.message.public.removed", file.displayName)
                                 });
                             else
                                 Alfresco.util.PopupManager.displayMessage({
-                                    text: this.msg("message.remove-public.failure", file.displayName)
+                                    text: this.msg("service.ev.share.make.public.share.message.remove-public.failure", file.displayName)
                                 });
                         },
                         scope: this
                     }
                 },
                 failure: {
-                    message: this.msg("message.remove-public.failure", file.displayName)
+                    message: this.msg("service.ev.share.make.public.share.message.remove-public.failure", file.displayName)
                 },
                 webscript: {
                     name: "eu/xfel/remove-public",

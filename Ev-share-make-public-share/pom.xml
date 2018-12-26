@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>eisenvault</groupId>
-    <artifactId>Ev-share-make-public-share</artifactId>
+    <artifactId>ev-share-make-public-share</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Ev-share-make-public-share Share Jar Module - SDK 3</name>
     <description>Share JAR Module (to be included in the share.war) - SDK 3</description>
@@ -39,6 +39,9 @@
         <!-- Compile with Java 7, default is 5 -->
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+        
+        <timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyyMMdd.HHmmss</maven.build.timestamp.format>
     </properties>
 
     <dependencies>
