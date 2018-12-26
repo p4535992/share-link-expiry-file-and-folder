@@ -19,7 +19,7 @@
 	<!-- ======================== -->
 	
     <!-- Add module specific messages and labels -->
-	<bean id="service-my-create-content.i18n.resources" class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
+	<bean id="service-ev-share-make-public-share.i18n.resources" class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
 		<property name="resourceBundles">
 			<list>
 				<value>alfresco.web-extension.messages.service-ev-share-make-public-share</value>
@@ -31,9 +31,9 @@
 	<!-- ======================== -->
     <!-- LOAD SHARE-CONFIG-CUSTOM -->
 	<!-- ======================== -->
-	<!-- [DISABLE WE USE TE EXTENSIONS MODULE] -->
+	<!-- [DISABLE WE USE THE EXTENSIONS MODULE] -->
 	<!-- 
-   <bean id="service-my-create-content.config.bootstrap" class="org.springframework.extensions.config.ConfigBootstrap" 
+   <bean id="service-ev-share-make-public-share.config.bootstrap" class="org.springframework.extensions.config.ConfigBootstrap" 
    	init-method="register" depends-on="webframework.configsource">
       <property name="configService" ref="web.config" />
       <property name="configs">
@@ -48,7 +48,7 @@
 	<!-- EVALUATOR -->
 	<!-- ========= -->
 
-   <bean id="evaluator.doclib.action.hasEffectivityAspect" parent="evaluator.doclib.action.hasAspect">
+   <bean id="service-ev-share-make-public-share.evaluator.doclib.action.hasEffectivityAspect" parent="evaluator.doclib.action.hasAspect">
 	    <property name="aspects">
 	        <list>
 	            <value>cm:effectivity</value>
@@ -56,7 +56,7 @@
 	    </property> 
 	</bean>
 
-    <bean id="evaluator.doclib.action.share.isFolder" parent="evaluator.doclib.action.nodeType">
+    <bean id="service-ev-share-make-public-share.evaluator.doclib.action.share.isFolder" parent="evaluator.doclib.action.nodeType">
 		<property name="types">
 			<list>
 				<value>cm:folder</value>

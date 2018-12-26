@@ -1,5 +1,5 @@
-<#include "../../org/alfresco/include/alfresco-template.ftl" />
-
+<#-- <#include "../../org/alfresco/include/alfresco-template.ftl" /> -->
+<#include "/org/alfresco/include/alfresco-template.ftl" />
 <@templateHeader/>
 
 <@templateBody>
